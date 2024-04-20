@@ -14,6 +14,7 @@ function Primary_Login() {
   };
    
     return (
+   
    <div className='container'>
       <form className='login-container' onSubmit={handleSubmit(onSubmit)}>
         <Input {...register('email', {
@@ -45,6 +46,7 @@ function Primary_Login() {
    </div>
      
   )
+  
 }
 
 export default Primary_Login 
