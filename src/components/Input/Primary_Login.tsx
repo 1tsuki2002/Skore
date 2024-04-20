@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Input } from '@chakra-ui/react'
+import { Button,Container } from 'react-bootstrap'
 
 type FormFields = {
   email: string;
@@ -15,7 +16,7 @@ function Primary_Login() {
    
     return (
    
-   <div className='container'>
+   <div className='Container'>
       <form className='login-container' onSubmit={handleSubmit(onSubmit)}>
         <Input {...register('email', {
           required: "Email necessario",
@@ -41,7 +42,7 @@ function Primary_Login() {
         variant='filled' 
         placeholder='Senha' />
         {errors.password && <div className="text-red-500">{errors.password.message}</div>}
-         <button type='submit'>Submit</button>
+         <Button variant="danger">Submit</Button>
       </form>
    </div>
      
