@@ -2,7 +2,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: #000
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+.fonte {
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: azure;
+}
+
+.fonte-B {
+    font-family: "Passion One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: azure;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -10,28 +27,84 @@
     align-items: center;
 }
 
-.form-container{
+/* ## Title Container ## */
+.title-container{
     display: block;
-    background-color: beige;
+    text-align: center;
+    margin: 0 auto;
+}
+.title-container .title{
+    color: #47046F;
+    font-size: 60px;
+}
+
+/* ## Form Container ## */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9169C1;
     color: beige;
     border-radius: 8px;
     margin: 0 auto;
-    width: 600px;
-    height: 600px;
+    width: 260px;
+    height: auto;
+    padding: 0.875rem;
 }
 
-.form-container .label {
-    font-size: 24px;
-    margin-bottom: 8px;
+/* ## Form Container - Childs ## */
+.form-title {
+    color: #000;
+    margin: 0.25rem;
+    color: azure;
 }
 .form-container input{
-    margin-top: 4px;
+    margin: 0.25rem;
     border-radius: 32px;
+    color: #000;
+    background: #fff;
+    max-width: 84%;
 }
 .form-container button{
     display: block;
-    background-color: black;
+    color: azure;
+    background-color: #9169C1;
     border-radius: 32px;
-    margin: 0 auto;
+    border: 1px solid #8351bb;
+    font-weight: bolder;
     width: 80px;
+    /* bottom: 0.25rem !important; */
+    margin: 16px;
+    transition: 0.7s;
+}
+.form-container button:hover{
+    background-color: #47046F;  
+}
+
+/* ## Link Senha ## */
+.fSenha{
+    padding-top: 4px;
+    font-size: 11px;
+    font-weight: 100;
+    transition: 1s;
+    text-align: left!important;
+}
+.fSenha a:hover{
+    font-weight: bolder!important;
+    color: #47046F;
+}
+
+/* ## Link Cadastro ## */
+.cadastro{
+    padding-top: 4px;
+    font-size: 0.75rem;
+}
+.cadastro a{
+    /* font-weight: bold; */
+    transition: 0.5s;
+}
+.cadastro a:hover{
+    font-weight: bolder;
+    color: #47046F;
 }

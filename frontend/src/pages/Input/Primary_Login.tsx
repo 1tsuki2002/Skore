@@ -1,9 +1,10 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input } from '@chakra-ui/react'
+import { Input,Text} from '@chakra-ui/react'
+// import toast, { Toaster } from 'react-hot-toast';
 
 import './primary-input.css'
 
-import back from '/src/assets/imgs/back1.jpg'
+// import back from '/src/assets/imgs/back2.jpg'
 
 
 type FormFields = {
@@ -12,45 +13,36 @@ type FormFields = {
 }
 
 function Primary_Login() {
-  const { register, handleSubmit, formState: {errors}, } = useForm<FormFields>();
+  const {handleSubmit } = useForm<FormFields>();
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
     console.log(data);
   };
    
     return (
-   
-   <div className='container' style={{ 
-      backgroundImage: `url(${back})` 
-     }}>
+
+
+   <div className='container' >
+    <div className="title-container">
+      <Text className="fonte-B title">Skore</Text>
+    </div>
+
       <form className='form-container'  onSubmit={handleSubmit(onSubmit)}>
-        <Input {...register('email', {
-          required: "Email necessario",
-          validate: (value) => {
-            if (!value.includes("@")) {
-              return "Email precisa está incluso @";
-            }
-            return true;
-          },
-        })} 
-        type='email' 
-        variant='filled' 
-        placeholder='E-mail'
-        size='sm' />
-        {errors.email && <div className="text-red-500">{errors.email.message}</div>}
-        <Input {...register('password', {
-          required: "Senha necessaria",
-          minLength: {
-            value:8,
-            message: "A senha precisa ter no minimo 8 caracteres",
-          },
-        })} 
-        type='password' 
-        variant='filled' 
-        placeholder='Senha' 
-        size='sm' />
-        {errors.password && <div className="text-red-500">{errors.password.message}</div>}
-         <button className="form-btn" type='submit'>Submit</button>
+
+        {/* Email */}
+        <Text className='fonte-B form-title'>E-mail</Text>
+        <Input type='email' variant='outline' placeholder='E-mail' size='sm' className='fonte' required/>
+
+        {/* Senha */}
+        <Text className='fonte-B form-title'>Senha</Text>
+        <Input type='password' variant='outline' placeholder='Senha' size='sm' className='fonte' required minLength={8}/>
+        <Text className="fonte fSenha"><a href="#">Esqueceu a senha?</a></Text>
+
+
+        <button className="fonte-B form-btn" type='submit'>Logar</button>
+
+        <Text className="fonte cadastro">Não tem cadastro? <a href="#">Inscreva-se</a></Text>
+
       </form>
    </div>
      
