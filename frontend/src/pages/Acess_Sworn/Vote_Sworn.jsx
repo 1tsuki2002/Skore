@@ -5,12 +5,9 @@ import {
     NumberDecrementStepper,
   } from '@chakra-ui/react'
 
-import { useState } from 'react'
-
 
 
 return(
-    const [values, setValues] = useState([0, 0, 0, 0]);
     
     <nav>
         <div className='Estilo'>
@@ -24,4 +21,3 @@ return(
         </div>
     </nav>
     );
-};
