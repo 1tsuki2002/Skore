@@ -1,11 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Input,Text} from '@chakra-ui/react'
-// import toast, { Toaster } from 'react-hot-toast';
+import { Link } from "react-router-dom";
 
-import './primary-input.css'
-
-// import back from '/src/assets/imgs/back2.jpg'
-
+import './primary-input.css';
 
 type FormFields = {
   email: string;
@@ -21,7 +18,6 @@ function Primary_Login() {
    
     return (
 
-
    <div className='container' >
     <div className="title-container">
       <Text className="fonte-B title">Skore</Text>
@@ -30,18 +26,18 @@ function Primary_Login() {
       <form className='form-container'  onSubmit={handleSubmit(onSubmit)}>
 
         {/* Email */}
-        <Text className='fonte-B form-title'>E-mail</Text>
-        <Input type='email' variant='outline' placeholder='E-mail' size='sm' className='fonte' required/>
+        <Text className='fonteN form-title'>E-mail</Text>
+        <Input type='email' variant='outline' placeholder='E-mail' size='sm' className='fonteN' required/>
 
         {/* Senha */}
-        <Text className='fonte-B form-title'>Senha</Text>
-        <Input type='password' variant='outline' placeholder='Senha' size='sm' className='fonte' required minLength={8}/>
-        <Text className="fonte fSenha"><a href="#">Esqueceu a senha?</a></Text>
+        <Text className='fonteN form-title'>Senha</Text>
+        <Input type='password' variant='outline' placeholder='Senha' size='sm' className='fonteN' required minLength={8}/>
+        <Link className="fonteN fSenha" to="../ForgotP">Esqueceu a senha?</Link>
 
 
-        <button className="fonte-B form-btn" type='submit'>Logar</button>
+        <button className="fonteN form-btn" type='submit'>Logar</button>
 
-        <Text className="fonte cadastro">Não tem cadastro? <a href="#">Inscreva-se</a></Text>
+        <Text className="fonteN cadastroT">Não tem cadastro? <Link className="fonteN cadastro" to="../Sign_Up" >Inscreva-se</Link></Text>
 
       </form>
    </div>

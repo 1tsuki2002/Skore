@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 
 
-    return(
+return(
     const [values, setValues] = useState([0, 0, 0, 0]);
     
     <nav>
